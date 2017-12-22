@@ -23,8 +23,9 @@
   </p>
   <script>
     function translate1() {
-      var input = document.getElementById("input").value;
-      document.getElementById("input1").innerHTML = "You just entered: " + input;
+      var x = document.getElementById("input").value;
+      var input = x.toLowerCase();
+      document.getElementById("input1").innerHTML = "You just entered: " + x;
       var eng = "abcdefghijklmnopqrstuvwxyz";
       var leet = ["(L","|3","[","cl","3","/=","[,","}{","!","_/","|<","1_","^^","/V","<>","|>","0_","|2","$","7","L|","|/","vv","><","`/","7_",];
       for (i=0; i<input.length; i++) {
