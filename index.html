@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <title>EN to LEET</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <p>
+    Translate EN to LEET
+  </p>
+  <form onsubmit="return false;">
+    <input type="text" id="input" />
+    <input type="submit" onclick="translate1();" />
+  </form>
+  <p id="input1">
+  </p>
+  </br>
+  <p id="output1">
+
+  </p>
+  <script>
+    function translate1() {
+      var input = document.getElementById("input").value;
+      document.getElementById("input1").innerHTML = "You just entered: " + input;
+      var eng = "abcdefghijklmnopqrstuvwxyz";
+      var leet = ["(L","|3","[","cl","3","/=","[,","}{","!","_/","|<","1_","^^","/V","<>","|>","0_","|2","$","7","L|","\|","\^/","><","`/","7_",];
+      for (i=0; i<input.length; i++) {
+        for (j=0; j<eng.length; j++) {
+          if (input[i] == eng[j]) {
+            var output = output + leet[j];
+          } else if (input [i] == " ") {
+            var output = output + "&nbsp &nbsp";
+            break;
+          } else {
+            var output = output + " ";
+          }
+        }
+      }
+      var output = output.substr (9, output.length);
+      document.getElementById("output1").innerHTML = "In leet, it is:&nbsp &nbsp" + output;
+    }
+  </script>
+</body>
+
+</html>
